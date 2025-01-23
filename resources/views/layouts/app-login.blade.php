@@ -56,23 +56,10 @@
 </head>
 
 <body id="page-top">
-    @if (!Auth::check())
     <!-- Display the login page if not authenticated -->
     <div id="content-login">
         @yield('content') <!-- Assuming the login view is rendered here -->
     </div>
-    @else
-    <!-- Display the rest of the page if authenticated -->
-    <div id="wrapper">
-        @include('layouts.sidebar')
-        <div id="content-wrapper" class="d-flex flex-column">
-            <div id="content">
-                @include('layouts.header')
-                @yield('content')
-            </div>
-        </div>
-    </div>
-    @endif
 </body>
 
 
