@@ -76,4 +76,6 @@ DB_PASSWORD=<your-password>
 
 <hr>
 
+<h2> to see postman collection i have with this name Car Rental.postman_collection.json</h2>
+
 <p>Feel free to contribute and create pull requests to improve the project! For any issues or inquiries, please contact the repository maintainer.</p>
