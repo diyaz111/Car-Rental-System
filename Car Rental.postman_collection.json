@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "90f81cae-7f94-402e-a5a0-98a613f4d910",
+		"name": "Car Rental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17628813"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "superadmin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12341234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://carrental.dv/api/login",
+					"protocol": "https",
+					"host": [
+						"carrental",
+						"dv"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cars Create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FycmVudGFsLmR2XC9hcGlcL2xvZ2luIiwiaWF0IjoxNzM3NjYxOTMxLCJleHAiOjE3Mzc2NjU1MzEsIm5iZiI6MTczNzY2MTkzMSwianRpIjoicGdzS1NqWUpjZHZSZnhwUSIsInN1YiI6NTA0LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.WCuhkL9cSxbjMmO-ltIgF-PV9Ch1xikXXHN9ENJ5M7o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "startDate",
+							"value": "01-05-2025",
+							"type": "text"
+						},
+						{
+							"key": "endDate",
+							"value": "05-05-2025",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Toyota",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": "Corolla",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://carrental.dv/api/booking/create",
+					"protocol": "https",
+					"host": [
+						"carrental",
+						"dv"
+					],
+					"path": [
+						"api",
+						"booking",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cars Search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FycmVudGFsLmR2XC9hcGlcL2xvZ2luIiwiaWF0IjoxNzM3NjI3MDk0LCJleHAiOjE3Mzc2MzA2OTQsIm5iZiI6MTczNzYyNzA5NCwianRpIjoic2RwWEM2RjdvSVYwV0QyRyIsInN1YiI6NTAxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.UcJ3PH1sKOAJqqlO5qexrQqKPmKjC3cOFEgM041wSl0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "brand",
+							"value": "mw",
+							"type": "text"
+						},
+						{
+							"key": "min_price",
+							"value": "50000",
+							"type": "text"
+						},
+						{
+							"key": "availability_status",
+							"value": "available",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://carrental.dv/api/cars/search",
+					"protocol": "https",
+					"host": [
+						"carrental",
+						"dv"
+					],
+					"path": [
+						"api",
+						"cars",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
