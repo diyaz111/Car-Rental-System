@@ -3,7 +3,7 @@
 
 <h2>Requirements</h2>
 <ul>
-    <li>PHP >= 8.0</li>
+    <li>PHP >= 7.3</li>
     <li>Composer</li>
     <li>MySQL or another supported database</li>
 </ul>
